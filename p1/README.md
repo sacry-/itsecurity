@@ -50,7 +50,32 @@ Praktikum 1
   <a href="http://nmap.org/book/man.html" target="_blank">nmap tutorial</a>
   ```shell
   # Example
-  nmap -v scanme.nmap.org
+  nmap -v scanme.nmap.org                                      
+  nmap 
+    -s*
+    -v # verbose
+    -p1-65535 # range of ports
+    -O # OS detection                       
+                             
+  -s*
+    sU - Udp,
+    sN - TCP, 
+    sF - Fin, 
+    sO IP, 
+    -b (ftp bounce scan)
+    sV service version scan
+
+  -6 ip-v6-scan
+
+  -A: Enable OS detection, version detection, script scanning, and traceroute
+                                                                 
+  Evasion:
+        -f Fragmentation of packets
+        -D decoys
+        -S spoofing
+                   
+  nmap -sUNO -A -v -p1-65535
+  nmap -A -v users.informatik.haw-hamburg.de
   ```
 
 # Aufgabe 1a: Sicherer Zugriff auf SSH-Server
