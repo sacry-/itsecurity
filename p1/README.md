@@ -20,21 +20,37 @@ Praktikum 1
   ...
 
   ## GPG
+  - <a href="https://www.gnupg.org/howtos/de/index.html" target="_blank">gpg how to</a>
+  - <a href="https://www.gnupg.org/howtos/de/GPGMiniHowto-4.html#ss4.1" target="_blank">encrypt</a>
+  - <a href="https://www.gnupg.org/howtos/de/GPGMiniHowto-5.html#GPG-Minihowto-signaturen" target="_blank">signieren</a>
   ```shell
-  # Some code
-  gpg
+  # encrypt/decrypt
+  gpg [--decrypt] [Datei]
+  gpg --encrypt Empfänger [Datei]
+  # signieren
+  gpg -s (oder --sign) [Datei]
   ```
 
   ## tcpdump
+  <a href="https://danielmiessler.com/study/tcpdump/" target="_blank">tcpdump tutorial</a>
   ```shell
-  # Some code
-  tcpdump
+  # Options
+  -n = no name resolving (raw IPs)
+  -X = ascii + hex content
+  -S = seqnos are absolute rather than relative
+  -s number = amount of bytes to be grepped (0 = snaplength ~ all) default 96 bytes
+  -i any = listen on all interfaces
+  -q = less protocol information
+  -c2 <protocol> = only with this protocol e.g. ICMP or TCP
+  -w capture_file = create a dump
+  -r capture_file = read in a dump
   ```
 
   ## nmap
+  <a href="http://nmap.org/book/man.html" target="_blank">nmap tutorial</a>
   ```shell
-  # Some code
-  nmap
+  # Example
+  nmap -v scanme.nmap.org
   ```
 
 # Aufgabe 1a: Sicherer Zugriff auf SSH-Server
@@ -75,6 +91,8 @@ nmap auf
   - www.haw-hamburg.de
   - users.informatik.haw-hamburg.de
   - www.dfn-cert.de 
+
+nur diese, kann zu rechtlichen Schwierigkeiten führen dies Wahllos zu betreiben
 
 Ziel: Analysieren und Vergleichen von nmap Daten
 
